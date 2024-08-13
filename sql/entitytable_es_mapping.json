@@ -1,0 +1,41 @@
+{
+  "aliases": {
+    "entity_table": {}
+  },
+  "mappings": {
+    "properties": {
+      "codeName": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "typeName": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "field1": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "field2": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "field3": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "createTime": {
+        "type": "date"
+      },
+      "updateTime": {
+        "type": "date"
+      }
+    }
+  }
+}
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shangxun.search.mapper.EntityTableMapper">
+
+    <resultMap id="BaseResultMap" type="com.shangxun.search.model.entity.EntityTable">
+            <id property="uuid" column="uuid" jdbcType="VARCHAR"/>
+            <result property="entityCode" column="entity_code" jdbcType="VARCHAR"/>
+            <result property="codeName" column="code_name" jdbcType="VARCHAR"/>
+            <result property="entityType" column="entity_type" jdbcType="VARCHAR"/>
+            <result property="typeName" column="type_name" jdbcType="VARCHAR"/>
+            <result property="entityNo" column="entity_no" jdbcType="VARCHAR"/>
+            <result property="entityName" column="entity_name" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="VARCHAR"/>
+            <result property="field0" column="field0" jdbcType="VARCHAR"/>
+            <result property="field1" column="field1" jdbcType="VARCHAR"/>
+            <result property="field2" column="field2" jdbcType="VARCHAR"/>
+            <result property="field3" column="field3" jdbcType="VARCHAR"/>
+            <result property="field4" column="field4" jdbcType="VARCHAR"/>
+            <result property="field5" column="field5" jdbcType="VARCHAR"/>
+            <result property="field6" column="field6" jdbcType="VARCHAR"/>
+            <result property="field7" column="field7" jdbcType="VARCHAR"/>
+            <result property="field8" column="field8" jdbcType="VARCHAR"/>
+            <result property="field9" column="field9" jdbcType="VARCHAR"/>
+            <result property="number0" column="number0" jdbcType="DOUBLE"/>
+            <result property="number1" column="number1" jdbcType="DOUBLE"/>
+            <result property="number2" column="number2" jdbcType="DOUBLE"/>
+            <result property="number3" column="number3" jdbcType="DOUBLE"/>
+            <result property="number4" column="number4" jdbcType="DOUBLE"/>
+            <result property="number5" column="number5" jdbcType="DOUBLE"/>
+            <result property="date1" column="date1" jdbcType="DATE"/>
+            <result property="date2" column="date2" jdbcType="DATE"/>
+            <result property="date3" column="date3" jdbcType="DATE"/>
+            <result property="date4" column="date4" jdbcType="DATE"/>
+            <result property="datetime1" column="datetime1" jdbcType="TIMESTAMP"/>
+            <result property="datetime2" column="datetime2" jdbcType="TIMESTAMP"/>
+            <result property="accessory" column="accessory" jdbcType="VARCHAR"/>
+            <result property="accessory1" column="accessory1" jdbcType="VARCHAR"/>
+            <result property="accessory2" column="accessory2" jdbcType="VARCHAR"/>
+            <result property="accessory3" column="accessory3" jdbcType="VARCHAR"/>
+            <result property="accessory4" column="accessory4" jdbcType="VARCHAR"/>
+            <result property="accessory5" column="accessory5" jdbcType="VARCHAR"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="remark1" column="remark1" jdbcType="VARCHAR"/>
+            <result property="remark2" column="remark2" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
+            <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+            <result property="companyId" column="company_id" jdbcType="VARCHAR"/>
+            <result property="companyName" column="company_name" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        uuid,entity_code,code_name,
+        entity_type,type_name,entity_no,
+        entity_name,status,field0,
+        field1,field2,field3,
+        field4,field5,field6,
+        field7,field8,field9,
+        number0,number1,number2,
+        number3,number4,number5,
+        date1,date2,date3,
+        date4,datetime1,datetime2,
+        accessory,accessory1,accessory2,
+        accessory3,accessory4,accessory5,
+        remark,remark1,remark2,
+        user_id,user_name,company_id,
+        company_name,create_time,update_time
+    </sql>
+
+    <select id="listEntityTable" resultType="com.shangxun.search.model.entity.EntityTable">
+        select *
+        from entity_table
+        where update_time >= #{minUpdateTime}
+    </select>
+</mapper>
